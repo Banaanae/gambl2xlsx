@@ -4,10 +4,20 @@ Converts vernier graphical analysis file to excel sheet
 
 ## Usage
 
+Run `pip install xlsxwriter`
+
 ```
-gambl2xlsx.py input [output]
-  Input:  Path to the .gambl file
-  Output: Name of the resulting .xlsx file
+gambl2xlsx.py [-v] [-o name] [-nh] [-g N] input
+
+  -v       Data is vertical instead of horizontal
+
+  -o name  Name of the resulting .xlsx file
+           If omitted, will use the name from input
+           Will fail if file already exists
+
+  -g N     Number of rows (or columns if -v) between each dataset
+
+  input    Path to the .gambl file
 ```
 
 ## Note
